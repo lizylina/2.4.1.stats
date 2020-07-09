@@ -42,8 +42,7 @@ public class StatsService {
         int quantityUnder = 0;
         for (int sale : sales) {
             if (sale < average) {
-                sale = 1;
-                quantityUnder += sale;
+                quantityUnder += 1;
             }
         }
         return quantityUnder;
@@ -51,12 +50,10 @@ public class StatsService {
 
     public int countOverAverage(int[] sales) {
         int average = calculateAverage(sales);
-        int month = 0;
         int quantityOver = 0;
         for (int sale : sales) {
             if (sale > average) {
-                sale = 1;
-                quantityOver += sale;
+                quantityOver += 1;
             }
         }
         return quantityOver;
